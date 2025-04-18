@@ -110,11 +110,52 @@ def ejercicio_diez():
         print('Que los cumplas feliz!')
 
 def ejercicio_once():
+    importe = int(input('Ingrese el importe a pagar: '))
     
-    pass
+    def cobrador(importe):
+        saldo_restante = importe
+        
+        while saldo_restante > 0:
+            monto = int(input(f'El importe a pagar es de {saldo_restante}. Por favor, ingrese un monto'))
+            saldo_restante -= monto
+    
+    cobrador(importe)
+
+def ejercicio_doce():
+    for numero in range(1, 21):
+        if numero % 2 == 0:
+            print(f'El número {numero} es par')
+        else:
+            print(f'El numero {numero} es impar')
+    
+def ejercicio_trece():
+    fichas_necesarias = 3
+    ficha_costo = 'F'
+    while fichas_necesarias > 0:
+        ficha = input(f'Ingresá {fichas_necesarias} ({ficha_costo}) fichas para comenzar ')
+        if len(ficha) == 1 and ficha in ficha_costo:
+            fichas_necesarias -= 1
+        else:
+            print(f'Por favor solamente ingrese fichas reales ({ficha_costo})')
+
+    print('¡A jugar!')
+    
+def ejercicio_catorce():
+    numero = int(input('Ingresa un número: '))
+    def es_primo(n):
+        cantidad_divisible = 0
+        for i in range(2, n):
+            if n % i == 0:
+                cantidad_divisible =+ 1
+        return cantidad_divisible == 0      
+    
+    for n in range(1, numero + 1):
+        if es_primo(n) == True:
+            print(f'El número {n} es primo')
+
 
 def main():
-    ejercicio_diez()
+    ejercicio_catorce()
     
 if __name__ == '__main__':
     main()
