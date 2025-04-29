@@ -1,0 +1,6 @@
+t = (10, 2, -3.5, 0)
+print('Tupla inicial')
+print(t)
+print('Tupla ordenada como lista: ')
+l = sorted(t)
+print(l)
